@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+<html>
+<body>
+
+<h2>Generate Table </h2>
+
+<label>Enter Number:</label>
+<input type="number" id="num">
+
+<button onclick="generateTable()">Generate Table</button>
+
+<p id="demo"></p>
+
+<script>
+function generateTable() {
+    let n = document.getElementById("num").value;
+    let text = "";
+    let i = 1;
+
+    if (n === "") {
+        document.getElementById("demo").innerHTML = "Please enter a number!";
+        return;
+    }
+
+    do {
+        text += n + " x " + i + " = " + (n * i) + "<br>";
+        i++;
+    }
+    while (i <= 10);  // 1 to 1000
+
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
